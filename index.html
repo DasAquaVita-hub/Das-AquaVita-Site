@@ -695,17 +695,18 @@ footer{background:var(--ink);border-top:1px solid rgba(59,130,212,.08);padding:3
         <div class="cdet"><div class="cdl">KvK</div><div class="cdv">98318071</div></div>
       </div>
     </div>
-    <div class="contact-form reveal">
+    <form class="contact-form reveal" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="b42ac0ea-bcab-4f0b-abd9-34afa11448ab">
       <div class="cf-title">Send a message</div>
       <div class="cf-sub">We respond within one business day.</div>
       <div class="cf-row">
-        <div class="cf-field"><label>Full name</label><input type="text" placeholder="Your name"></div>
-        <div class="cf-field"><label>Organisation</label><input type="text" placeholder="Company or institution"></div>
+        <div class="cf-field"><label>Full name</label><input type="text" name="name" placeholder="Your name" required></div>
+        <div class="cf-field"><label>Organisation</label><input type="text" name="organisation" placeholder="Company or institution"></div>
       </div>
-      <div class="cf-field"><label>Email address</label><input type="email" placeholder="your@email.com"></div>
+      <div class="cf-field"><label>Email address</label><input type="email" name="email" placeholder="your@email.com" required></div>
       <div class="cf-field">
         <label>Area of interest</label>
-        <select>
+        <select name="interest">
           <option value="">Select an area of interest</option>
           <option>Pilot deployment</option>
           <option>Investment opportunity</option>
@@ -716,9 +717,9 @@ footer{background:var(--ink);border-top:1px solid rgba(59,130,212,.08);padding:3
           <option>Other</option>
         </select>
       </div>
-      <div class="cf-field"><label>Message</label><textarea placeholder="Tell us about your interest or project..."></textarea></div>
-      <button class="btn btn-solid" style="width:100%;margin-top:4px;font-size:15px;padding:15px">Send Message</button>
-    </div>
+      <div class="cf-field"><label>Message</label><textarea name="message" placeholder="Tell us about your interest or project..." required></textarea></div>
+      <button type="submit" class="btn btn-solid" style="width:100%;margin-top:4px;font-size:15px;padding:15px">Send Message</button>
+    </form>
   </div>
 </section>
 
